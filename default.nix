@@ -8,6 +8,6 @@ naersk.buildPackage {
     (path: type: type != "directory" || builtins.baseNameOf path != "target")
     ./.;
 
-  buildInputs = [ pkgs.openssl ];
+  buildInputs = [ pkgs.openssl pkgs.pkg-config ];
   doCheck = false;
 }
